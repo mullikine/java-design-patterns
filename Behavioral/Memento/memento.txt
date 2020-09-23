@@ -1,0 +1,67 @@
+Memento Pattern
+
+Bryan Hansen
+twitter: bh5k | http://www.linkedin.com/in/hansenbryan
+
+Concepts
+
+ Restore Object to previous state
+ Externalize internal state
+ Undo/Rollback
+ Shields complex internals
+ Examples:
+ java.util.Date
+ java.io.Serializable
+
+Design
+
+Class based
+Originator
+Caretaker
+Memento
+Magic Cookie
+
+UML
+
+Everyday Example - Serializable
+
+Employee emp = new Employee();
+
+emp.setName("Bryan Hansen");
+emp.setAddress("111 E Code Street");
+emp.setPhone("888-555-1212");
+
+serialize(emp);
+
+Employee newEmp = deserialize();
+
+Exercise Memento
+
+Originator, Caretaker, Memento
+Create Memento
+
+Pitfalls
+
+ Can be expensive
+ Deletes/history
+ Exposing information
+
+Contrast
+
+Memento
+ State captured
+ Independent state
+ Caretaker/History
+
+Command
+ Request captured
+ Independent request
+ History side benefit
+
+Memento Summary
+
+ Capture state
+ Can get heavy with history
+ Recreate state
+ Command
+

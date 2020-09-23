@@ -1,0 +1,71 @@
+AbstractFactory Pattern
+
+Bryan Hansen
+twitter: bh5k | http://www.linkedin.com/in/hansenbryan
+
+Concepts
+
+ Factory of Factories
+ Factory of related objects
+ Common Interface
+ Defer to Subclasses
+ Examples:
+ DocumentBuilder
+ Frameworks
+
+Design
+
+Groups Factories together
+Factory is responsible for lifecycle
+Common Interface
+Concrete Classes
+Parameterized create method
+Composition
+
+Everyday Example - DocumentBuilderFactory
+
+DocumentBuilderFactory abstractFactory =
+DocumentBuilderFactory.newInstance();
+
+DocumentBuilder factory = abstractFactory.newDocumentBuilder();
+
+Document doc = factory.parse(bais);
+
+Exercise AbstractFactory
+
+Code Walkthrough
+AbstractFactory
+Factory
+Product
+
+Pitfalls
+
+ Complexity
+ Runtime switch
+ Pattern within a pattern
+ Problem specific
+ Starts as a Factory
+
+Contrast
+
+Factory
+ Returns various instances
+ Multiple constructors
+ Interface driven
+ Adaptable to environment more
+
+easily
+
+AbstractFactory
+ Implemented with a Factory
+ Hides the Factory
+ Abstracts Environment
+ Built through Composition
+
+AbstractFactory Summary
+
+ Group of similar Factories
+ Complex
+ Heavy abstraction
+ Framework pattern
+

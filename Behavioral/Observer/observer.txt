@@ -1,0 +1,73 @@
+Observer Pattern
+
+Bryan Hansen
+twitter: bh5k | http://www.linkedin.com/in/hansenbryan
+
+Concepts
+
+ One to Many
+ Decoupled
+ Event Handling
+ Pub/Sub
+ M-V-C
+ Examples:
+
+ java.util.Observer
+ java.util.EventListener
+ javax.jms.Topic
+
+Design
+
+Subject
+Observer
+Observable
+Views are Observers
+Subject, Concrete Subject, Observer,
+Concrete Observer
+
+UML
+
+Everyday Example - Observer
+
+TwitterStream messageStream = new TwitterStream();
+
+Client client1 = new Client("Bryan");
+
+Client client2 = new Client("Mark");
+
+messageStream.addObserver(client1);
+messageStream.addObserver(client2);
+
+messageStream.someoneTweeted();
+
+Exercise Observer
+
+Subject, ConcreteSubject, Observer,
+ConcreteObserver
+Compare Observer
+
+Pitfalls
+
+ Unexpected updates
+ Large sized consequences
+ What changed
+ Debugging difficult
+
+Contrast
+
+Observer
+ One-to-Many
+ Decoupled
+ Broadcast Communication
+
+Mediator
+ One-to-one-to-Many
+ Decoupled
+ Complex Communication
+
+Observer Summary
+
+ Decoupled communication
+ Built in functionality
+ Used with mediator
+

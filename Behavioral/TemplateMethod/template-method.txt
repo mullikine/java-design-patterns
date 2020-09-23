@@ -1,0 +1,72 @@
+Template Method Pattern
+
+Bryan Hansen
+twitter: bh5k | http://www.linkedin.com/in/hansenbryan
+
+Concepts
+
+ Code reuse
+ Common in libraries/frameworks
+ IoC
+ Algorithm emphasis
+ Examples:
+ java.util.Collections#sort()
+ java.util.AbstractList#indexOf()
+
+Design
+
+Abstract Base class
+Base calls Child
+Hooks
+Operations
+AbstractBase, ConcreteClass
+
+UML
+
+Everyday Example - Collections#sort
+
+Collections.sort(people, new Comparator<Person>() {
+ @Override
+ public int compare(Person o1, Person o2) {
+ if(o1.getAge() > o2.getAge()) {
+ return 1;
+ }
+
+ if(o1.getAge() < o2.getAge()) {
+ return -1;
+ }
+
+ return 0;
+ }
+});
+
+Exercise Template Method
+
+OrderTemplate, WebOrder,
+StoreOrder
+Create Template Method
+
+Pitfalls
+
+ Restrict access
+ Confusing hierarchy
+ Difficult Program flow
+
+Contrast
+
+Template Method
+ Same algorithm
+ Class based
+ Compile time
+
+Strategy
+ Algorithm per Strategy
+ Interface based
+ Run time
+
+Template Method Summary
+
+ Guarantees Algorithm adherence
+ IoC
+ Easier implementation
+

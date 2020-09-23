@@ -1,0 +1,74 @@
+Adapter Pattern
+
+Bryan Hansen
+twitter: bh5k | http://www.linkedin.com/in/hansenbryan
+
+Adapter
+
+Concepts
+
+ Plug adaptor
+ Convert interface into another interface
+ Legacy
+ Translates requests
+ Client, Adapter, Adaptee
+ Examples:
+
+ Arrays -> Lists
+ Streams
+
+Design
+
+Client centric
+Integrate new with old
+Interface, but not required
+Adaptee can be the implementation
+
+Everyday Example - Arrays.asList
+
+Integer[] arrayOfInts = new Integer[] { 42, 43, 44 };
+
+List<Integer> listOfInts = Arrays.asList(arrayOfInts);
+
+System.out.println(arrayOfInts);
+
+System.out.println(listOfInts);
+
+Exercise Adapter
+
+Walkthrough
+Create Adapter
+Decorator
+Another Adapter
+
+Pitfalls
+
+ Not a lot!
+ Don't complicate
+ Multiple Adapters
+ Don't add functionality
+
+Contrast
+
+Adapter
+ Works after code is designed
+ Legacy
+ Retrofitted
+ Provides different interface
+
+Bridge
+ Designed upfront
+ Abstraction and implementation
+
+vary
+
+ Built in advance
+ Both adapt multiple systems
+
+Adapter Summary
+
+ Simple solution
+ Easy to implement
+ Integrate with Legacy
+ Can provide multiple adapters
+
